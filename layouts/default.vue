@@ -8,23 +8,24 @@
       clipped
       expand-on-hover
     >
-      <v-list dense>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-view-dashboard</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Dashboard</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-cog</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+      <v-list nav>
+        <v-subheader>Pages</v-subheader>
+        <v-list-item-group v-model="item">
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            link
+            nuxt
+            :to="item.to"
+          >
+            <v-list-item-icon>
+              <v-icon v-text="item.icon"></v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.text"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
@@ -47,12 +48,17 @@
 <script>
 export default {
   data: () => ({
-    drawer: true
+    drawer: true,
+    item: 0,
+    items: [{ icon: 'mdi-home', text: 'Welcome', to: '/' }]
   })
 }
 </script>
 
 <style lang="scss" scoped>
+.v-subheader {
+  padding: 0px;
+}
 footer {
   display: flex;
   justify-content: center;

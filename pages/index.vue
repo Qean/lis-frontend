@@ -14,13 +14,10 @@
           </v-card>
         </v-flex>
         <br />
-        <v-flex>
-          <v-img
-            src="https://cdn.pixabay.com/photo/2017/02/01/10/26/laboratory-2029470_1280.png"
-            min-height="500"
-            min-width="500"
-          />
-        </v-flex>
+        <v-img
+          src="https://cdn.pixabay.com/photo/2017/02/01/10/26/laboratory-2029470_1280.png"
+          max-width="500px"
+        />
         <br />
       </v-layout>
     </v-container>
@@ -37,10 +34,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.imgHolder {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-</style>
+<style lang="scss" scoped></style>
