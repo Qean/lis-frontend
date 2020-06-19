@@ -53,13 +53,29 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/firebase'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  firebase: {
+    config: {
+      apiKey: "AIzaSyAwtPFooi3bX0fh_QgI6jrZNbB4w_00Kxc",
+      authDomain: "lis-server.firebaseapp.com",
+      databaseURL: "https://lis-server.firebaseio.com",
+      projectId: "lis-server",
+      storageBucket: "lis-server.appspot.com",
+      messagingSenderId: "298946611046",
+      appId: "1:298946611046:web:e09647a70e1383cabf6aa7",
+      measurementId: "G-7X6PBCE1P7"
+    },
+    services: {
+      auth: true
+    }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
