@@ -4,9 +4,7 @@
       <v-layout column justify-center align-center>
         <v-flex>
           <v-card>
-            <v-card-title class="headline"
-              >Welcome to the LIS medical system</v-card-title
-            >
+            <v-card-title class="headline">Welcome to the LIS medical system</v-card-title>
             <Login />
             <v-card-actions>
               <v-spacer />

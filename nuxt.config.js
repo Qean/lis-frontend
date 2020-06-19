@@ -3,10 +3,10 @@ import colors from 'vuetify/es5/util/colors'
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
-        router: {
-          base: '/lis-frontend/'
-        }
+      router: {
+        base: '/lis-frontend/'
       }
+    }
     : {}
 
 export default {
@@ -89,15 +89,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
     }
   },
   ...routerBase

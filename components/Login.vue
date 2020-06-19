@@ -3,9 +3,7 @@
     <h1>Login</h1>
     <v-text-field v-model="email" :rules="emailRules" label="E-mail" required />
     <v-text-field v-model="password" label="Password" required />
-    <v-btn :disabled="!valid" color="success" class="mr-4" @click="login">
-      Login
-    </v-btn>
+    <v-btn :disabled="!valid" color="success" class="mr-4" @click="login">Login</v-btn>
   </v-form>
 </template>
 <script>
