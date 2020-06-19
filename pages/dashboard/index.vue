@@ -9,7 +9,9 @@
             <v-form ref="form" v-model="valid">
               <v-text-field v-model="testName" label="Test name" required />
               <v-text-field v-model="testCode" label="Test code" required />
-              <v-btn color="success" class="mr-4" @click="addTest">Add test</v-btn>
+              <div class="buttons">
+                <v-btn color="success" class="mr-4" @click="addTest">Add test</v-btn>
+              </div>
             </v-form>
             <v-card-actions>
               <v-spacer />
@@ -28,6 +30,9 @@
 </template>
 
 <script>
+import * as firebase from "firebase/app";
+import "firebase/firestore";
+
 import Table from "@/components/Table";
 
 export default {
@@ -43,6 +48,13 @@ export default {
   methods: {
     addTest() {
       this.tests.push({ name: this.testName, code: this.testCode });
+      this.$fireStore
+        .collection("Tests")
+        .doc(this.testName)
+        .set({
+          name: this.testName,
+          code: this.testCode
+        });
     }
   }
 };

@@ -63,17 +63,18 @@ export default {
   axios: {},
   firebase: {
     config: {
-      apiKey: "AIzaSyAwtPFooi3bX0fh_QgI6jrZNbB4w_00Kxc",
-      authDomain: "lis-server.firebaseapp.com",
-      databaseURL: "https://lis-server.firebaseio.com",
-      projectId: "lis-server",
-      storageBucket: "lis-server.appspot.com",
-      messagingSenderId: "298946611046",
-      appId: "1:298946611046:web:e09647a70e1383cabf6aa7",
-      measurementId: "G-7X6PBCE1P7"
+      apiKey: "AIzaSyBgvyC63x1Hh1LauEOjPsqx2ZUx8axRbvk",
+      authDomain: "wat-lis.firebaseapp.com",
+      databaseURL: "https://wat-lis.firebaseio.com",
+      projectId: "wat-lis",
+      storageBucket: "wat-lis.appspot.com",
+      messagingSenderId: "1071976683038",
+      appId: "1:1071976683038:web:a77a34334d32c841a9400f",
+      measurementId: "G-Z9M87RCKE3"
     },
     services: {
-      auth: true
+      auth: true,
+      firestore: true
     }
   },
   /*
